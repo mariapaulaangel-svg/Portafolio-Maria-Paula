@@ -1,0 +1,500 @@
+/* COLORES PRINCIPALES */
+
+:root {
+    --rosa: #D94F8D;
+    --rosa-claro: #F8B1D0;
+    --rosa-pastel: #FBD0E2;
+    --naranja: #F5A019;
+    --morado: #790C58;
+    --blanco: #FFFFFF;
+}
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    font-family: 'DM Sans', sans-serif;
+    color: #422D39;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    width: 92%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: #75445A;
+    line-height: 0.8;
+    transform: rotate(-2deg);
+}
+
+.logo small {
+    color: var(--naranja);
+    font-size: 21px;
+    margin-left: 35px;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    background: var(--rosa);
+    color: white;
+    padding: 10px 28px;
+    border-radius: 40px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: var(--morado);
+    transform: translateY(-4px);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* PORTADA */
+
+.portada {
+    min-height: 440px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.titulo-portada h1 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--rosa);
+    font-size: clamp(75px, 11vw, 130px);
+    line-height: 0.75;
+    text-align: center;
+    transform: rotate(-4deg);
+    text-shadow: 4px 5px white, 7px 8px #D9C7D0;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-portada p {
+    color: var(--morado);
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.personaje {
+    position: relative;
+    text-align: center;
+}
+
+.personaje img {
+    width: 250px;
+    height: 280px;
+    object-fit: cover;
+    border: 9px solid white;
+    border-radius: 45%;
+    box-shadow: 0 5px 15px #0004;
+    transform: rotate(5deg);
+}
+
+.tarjeta-hola {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    background: white;
+    border: 3px solid var(--naranja);
+    padding: 10px;
+    transform: rotate(-8deg);
+    display: flex;
+    flex-direction: column;
+    color: var(--morado);
+}
+
+.tarjeta-hola strong {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+}
+
+.decoracion {
+    position: absolute;
+    font-size: 130px;
+    z-index: -1;
+}
+
+.naranja {
+    color: var(--naranja);
+    left: 5%;
+    top: 20px;
+}
+
+.rosa {
+    color: var(--rosa);
+    right: 5%;
+    top: 20px;
+}
+
+.sticker {
+    position: absolute;
+    top: 15px;
+    right: 42%;
+    color: var(--morado);
+    font-size: 70px;
+}
+
+/* SOBRE MÍ */
+
+.sobre-mi {
+    width: 88%;
+    margin: 50px auto 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.texto-sobre-mi {
+    background: var(--rosa-pastel);
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.35;
+    font-size: 14px;
+    position: relative;
+}
+
+.texto-sobre-mi h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--morado);
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.texto-sobre-mi p {
+    margin-bottom: 15px;
+}
+
+.foto-sobre-mi {
+    position: relative;
+    text-align: center;
+}
+
+.foto-sobre-mi img {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border: 8px solid white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px #0004;
+    transform: rotate(7deg);
+}
+
+.estrella-foto {
+    position: absolute;
+    top: -35px;
+    left: 10%;
+    font-size: 75px;
+    color: var(--naranja);
+}
+
+/* PROYECTOS */
+
+.proyectos {
+    width: 92%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.proyectos h2 {
+    color: var(--rosa);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: 0.8fr 1.1fr 0.8fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.proyecto {
+    height: 300px;
+    background: var(--rosa);
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.proyecto.grande {
+    height: 400px;
+}
+
+.proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.proyecto:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px #D94F8D55;
+}
+
+.boton-vermas {
+    display: inline-block;
+    margin-top: 45px;
+    background: var(--rosa-claro);
+    color: #482638;
+    padding: 12px 65px;
+    border-radius: 40px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.boton-vermas:hover {
+    background: var(--rosa);
+    color: white;
+}
+
+/* CONTACTO */
+
+.contacto {
+    width: 90%;
+    margin: 40px auto 60px;
+    min-height: 350px;
+    background: var(--rosa-pastel);
+    border-radius: 180px;
+    box-shadow: 0 4px 12px #0003;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contenido-contacto {
+    width: 65%;
+    padding: 35px;
+}
+
+.contenido-contacto h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--morado);
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenido-contacto a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.contenido-contacto a span:last-child {
+    background: var(--rosa);
+    padding: 7px 13px;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.icono {
+    color: var(--rosa);
+    font-size: 30px;
+}
+
+.avatar-contacto {
+    position: absolute;
+    left: -10px;
+    bottom: 25px;
+    width: 190px;
+    height: 220px;
+    object-fit: cover;
+    border: 8px solid white;
+    border-radius: 50%;
+    box-shadow: 0 5px 12px #0004;
+    z-index: 2;
+}
+
+.estrella-contacto {
+    position: absolute;
+    right: -20px;
+    bottom: -25px;
+    font-size: 100px;
+    color: var(--rosa);
+}
+
+/* PIE DE PÁGINA */
+
+.pie {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pie p {
+    border: 1px solid var(--rosa);
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: var(--rosa);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    width: 60px;
+    height: 50px;
+    border: 1px solid var(--rosa);
+    border-radius: 30px;
+    color: var(--rosa);
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+.redes a:hover {
+    background: var(--rosa);
+    color: white;
+}
+
+/* RESPONSIVE: CELULARES Y TABLETS */
+
+@media (max-width: 760px) {
+
+    .encabezado {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: var(--rosa);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 22px;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu.activo {
+        display: flex;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+
+    .portada {
+        flex-direction: column;
+        padding: 45px 0;
+        gap: 40px;
+    }
+
+    .sobre-mi {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-sobre-mi {
+        padding: 20px;
+    }
+
+    .contenedor-proyectos {
+        gap: 8px;
+    }
+
+    .proyecto {
+        height: 160px;
+    }
+
+    .proyecto.grande {
+        height: 230px;
+    }
+
+    .contacto {
+        width: 95%;
+        border-radius: 70px 70px 30px 30px;
+        padding: 30px 5px 30px 80px;
+    }
+
+    .avatar-contacto {
+        width: 120px;
+        height: 150px;
+        left: -15px;
+    }
+
+    .contenido-contacto {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contenido-contacto h2 {
+        font-size: 35px;
+    }
+
+    .contenido-contacto a {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .contenido-contacto a span:last-child {
+        padding: 6px;
+    }
+
+    .pie {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+
